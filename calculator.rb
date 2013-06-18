@@ -27,6 +27,10 @@ def volume(length, width, height)
   return length*width*height
 end
 
+def prism(a, b, c)
+  return (2*a*b) + (2*b*c) + (2*a*c)
+end
+
 puts "what do you want to do?"
 operation = gets.chomp
 case operation
@@ -102,5 +106,17 @@ when "volume"
   height = gets.chomp.to_i
 
   puts "The volume is " + volume(length, width, height).to_s
+
+when "prism"
+  puts "Give me the first number"
+  a = gets.chomp.to_i
+
+  puts "and the second number?"
+  b = gets.chomp.to_i
+
+  puts "whats the last number?"
+  c = gets.chomp.to_i
+
+  puts "The answer is " + prism(a, b, c).to_s
 
 end
