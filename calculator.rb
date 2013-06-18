@@ -1,3 +1,12 @@
+def get_two_numbers
+  puts "whats the first number?"
+  num1 = gets.chomp.to_f
+  puts "whats the second number?"
+  num2 = gets.chomp.to_f
+
+  return num1, num2
+end
+
 
 def add(num1, num2)
   return num1+num2
@@ -36,38 +45,22 @@ operation = gets.chomp
 case operation
 
 when "add"
-  puts "Give me the first number"
-  num1 = gets.chomp.to_i
-
-  puts "and the second number?"
-  num2 = gets.chomp.to_i
+  num1, num2 = get_two_numbers
 
   puts "The answer is " + add(num1, num2).to_s
 
 when "subtract"
-  puts "Give me the first number"
-  num1 = gets.chomp.to_i
-
-  puts "and the second number?"
-  num2 = gets.chomp.to_i
+  num1, num2 = get_two_numbers
 
   puts "The answer is " + subtract(num1, num2).to_s
 
 when "divide"
-  puts "Give me the first number"
-  num1 = gets.chomp.to_f
-
-  puts "and the second number?"
-  num2 = gets.chomp.to_f
+  num1, num2 = get_two_numbers
 
   puts "The answer is " + divide(num1, num2).to_s
 
 when "multiply"
-  puts "Give me the first number"
-  num1 = gets.chomp.to_i
-
-  puts "and the second number?"
-  num2 = gets.chomp.to_i
+ num1, num2 = get_two_numbers
 
 puts "The answer is " + multiply(num1, num2).to_s
 
